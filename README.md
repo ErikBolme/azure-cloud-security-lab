@@ -115,7 +115,7 @@ Syslog
 
 ## About Me
 
-**Erik Helander Bolme** — Bachelor student in Cybersecurity at Høyskolen Kristiania. Background as Information Manager and data security lead in the Norwegian Armed Forces, with hands-on experience in RBAC, access management, and security routines in classified environments.
+**Erik Helander Bolme** — Bachelor student in Cybersecurity. Background as Information Manager and data security lead in the Norwegian Armed Forces, with hands-on experience in RBAC, access management, and security routines in classified environments.
 
 - [LinkedIn](https://linkedin.com)
 - erikbolme@hotmail.com
