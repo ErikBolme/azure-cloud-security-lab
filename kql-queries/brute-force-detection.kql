@@ -1,1 +1,5 @@
-
+Syslog
+| where Facility == "auth"
+| where SyslogMessage contains "Failed" or SyslogMessage contains "Authentication failure"
+| summarize FailedAttempts = count() by SrcIP = extract("from ([0-9.]+)", 1, SyslogMessage), HostName
+| where FailedAttempts >= 5
