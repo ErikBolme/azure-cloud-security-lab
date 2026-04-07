@@ -4,7 +4,7 @@ A hands-on security monitoring environment built in Microsoft Azure, demonstrati
 
 ## Architecture
 
-![Architecture Diagram](screenshots/architecture-diagram.png)
+![Architecture Diagram](screenshots/infrastructure/architecture-diagram.png)
 
 The lab implements a classic **3-tier network architecture** with defense-in-depth principles:
 
