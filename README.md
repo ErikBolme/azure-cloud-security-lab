@@ -86,18 +86,17 @@ Syslog
 | render timechart
 ```
 
-## Screenshots
-
 | Screenshot | Description |
 |------------|-------------|
-| [NSG Rules](screenshots/nsg-web.jpg) | Inbound security rules on nsg-web showing HTTP, HTTPS, SSH (IP-restricted), and deny-all |
-| [Segmentation Test](screenshots/segmentation-test.png) | SSH to app-tier succeeds, port 3306 to db-tier blocked — proving NSG enforcement |
-| [Nginx](screenshots/nginx.jpg) | Web server accessible on port 80 through NSG |
-| [Analytics Rules](screenshots/analytics-rules.jpg) | 4 active detection rules mapped to MITRE ATT&CK |
-| [Hydra Attack](screenshots/hydra.jpg) | Brute force attack running from Kali Linux |
-| [Sentinel Logs](screenshots/sentinel-logs.jpg) | 2,350+ failed auth events captured in real-time |
-| [Incidents](screenshots/incidents.jpg) | Sentinel incidents triggered by detection rules |
-| [Dashboard](screenshots/dashboard.jpg) | Security Overview Dashboard visualizing attack data |
+| [NSG Rules](screenshots/network/nsg-web.jpg) | Inbound security rules showing least privilege enforcement |
+| [Segmentation Test](screenshots/network/segmentation-test.jpg) | SSH to app-tier succeeds, db-tier blocked — proving NSG enforcement |
+| [Architecture](screenshots/infrastructure/architecture-diagram.png) | Full lab architecture diagram |
+| [Nginx](screenshots/infrastructure/nginx.jpg) | Web server accessible on port 80 through NSG |
+| [Analytics Rules](screenshots/sentinel/analytics-rules.jpg) | 4 active detection rules mapped to MITRE ATT&CK |
+| [Sentinel Logs](screenshots/sentinel/sentinel-logs.jpg) | 2,350+ failed auth events captured in real-time |
+| [Incidents](screenshots/sentinel/incidents.jpg) | Incidents triggered by detection rules |
+| [Dashboard](screenshots/sentinel/dashboard.jpg) | Security Overview Dashboard visualizing attack data |
+| [Hydra Attack](screenshots/attack-simulation/hydra.jpg) | Brute force attack from Kali Linux |
 
 ## Tools & Technologies
 
