@@ -20,8 +20,8 @@ All resources are deployed in **Norway East** under a single resource group (`rg
 
 ### Network Security
 - **Virtual Network** with 3 isolated subnets and dedicated NSGs per tier
-- **Least privilege NSG rules** — each tier only allows the minimum required ports from the expected source
-- **Verified segmentation** — confirmed that web-tier can SSH to app-tier, but cannot reach db-tier directly
+- **Least privilege NSG rules** - each tier only allows the minimum required ports from the expected source
+- **Verified segmentation** - confirmed that web-tier can SSH to app-tier, but cannot reach db-tier directly
 
 ### SIEM & Monitoring
 - **Microsoft Sentinel** connected to a Log Analytics workspace (`law-security-lab`)
@@ -33,9 +33,9 @@ Four custom analytics rules, each mapped to MITRE ATT&CK:
 
 | Rule | Severity | MITRE Technique | What It Detects |
 |------|----------|-----------------|-----------------|
-| Brute Force SSH Attempt Detected | High | T1110 — Brute Force | 5+ failed auth attempts from a single IP within 5 minutes |
-| Successful SSH Login — Monitor | Medium | T1078 — Valid Accounts | Any accepted SSH session (for baselining and anomaly review) |
-| NSG Rule Modified | High | T1562 — Impair Defenses | Changes to network security group rules (potential firewall tampering) |
+| Brute Force SSH Attempt Detected | High | T1110 - Brute Force | 5+ failed auth attempts from a single IP within 5 minutes |
+| Successful SSH Login - Monitor | Medium | T1078 - Valid Accounts | Any accepted SSH session (for baselining and anomaly review) |
+| NSG Rule Modified | High | T1562 - Impair Defenses | Changes to network security group rules (potential firewall tampering) |
 | Advanced Multistage Attack Detection | High | Multiple | Built-in Fusion rule correlating signals across kill chain stages |
 
 ### Attack Simulation
@@ -109,7 +109,7 @@ Syslog
 ## Lessons Learned
 
 - **Dynamic IP challenge:** My public IP changed between sessions, locking me out of SSH. In production, Azure Bastion or a VPN gateway would solve this. Documenting this as a real operational consideration.
-- **Log ingestion delay:** Azure Monitor Agent takes 15-30 minutes to start forwarding data after deployment. Initial attack simulation ran before logs were flowing — had to re-run after confirming ingestion.
+- **Log ingestion delay:** Azure Monitor Agent takes 15-30 minutes to start forwarding data after deployment. Initial attack simulation ran before logs were flowing - had to re-run after confirming ingestion.
 - **Auth log format:** Ubuntu 24.04 uses "Failed keyboard-interactive/pam" instead of "Failed password" for password-based SSH failures. Detection rules must account for vendor-specific log formats.
 - **NSG rule ordering:** Lower priority numbers are evaluated first. Keeping deny-all at 4096 leaves room for future allow rules without restructuring.
 
