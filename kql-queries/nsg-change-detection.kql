@@ -1,0 +1,4 @@
+AzureActivity
+| where OperationNameValue contains "MICROSOFT.NETWORK/NETWORKSECURITYGROUPS"
+| where ActivityStatusValue == "Success"
+| project TimeGenerated, Caller, OperationNameValue, ResourceGroup, Properties
