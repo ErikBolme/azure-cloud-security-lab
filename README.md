@@ -88,10 +88,10 @@ Syslog
 
 | Screenshot | Description |
 |------------|-------------|
-| [NSG Rules](screenshots/network/nsg-web.jpg) | Inbound security rules showing least privilege enforcement |
-| [Segmentation Test](screenshots/network/segmentation-test.jpg) | SSH to app-tier succeeds, db-tier blocked — proving NSG enforcement |
 | [Architecture](screenshots/infrastructure/architecture-diagram.png) | Full lab architecture diagram |
+| [Resource Group](screenshots/infrastructure/resource-group-overview.jpg) | All resources in rg-security-lab |
 | [Nginx](screenshots/infrastructure/nginx.jpg) | Web server accessible on port 80 through NSG |
+| [Segmentation Test](screenshots/network/segmentation-test.jpg) | SSH to app-tier succeeds, db-tier blocked — proving NSG enforcement |
 | [Analytics Rules](screenshots/sentinel/analytics-rules.jpg) | 4 active detection rules mapped to MITRE ATT&CK |
 | [Sentinel Logs](screenshots/sentinel/sentinel-logs.jpg) | 2,350+ failed auth events captured in real-time |
 | [Incidents](screenshots/sentinel/incidents.jpg) | Incidents triggered by detection rules |
