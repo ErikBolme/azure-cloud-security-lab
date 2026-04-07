@@ -1,0 +1,6 @@
+Syslog
+| where Facility == "auth"
+| where SyslogMessage contains "Accepted"
+| extend SourceIP = extract("from ([0-9.]+)", 1, SyslogMessage)
+| extend User = extract("for ([a-zA-Z0-9_]+)", 1, SyslogMessage)
+| project TimeGenerated, HostName, User, SourceIP, SyslogMessage
